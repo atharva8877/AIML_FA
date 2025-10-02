@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Predicting Student Performance</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (username === 'lucifer' && password === '886605') {
+                window.location.href = 'model.html';
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-title">Predicting Student Performance</div>
+        <p>Enter username: <b>Name</b>, password: <b>code</b></p>
+        <form onsubmit="handleLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="button-container" style="margin-top:15px;">
+            <a href="https://github.com/skprasad117/Predicting-Student-Performance-Using-Machine-Learning" class="btn" target="_blank">GitHub Repository</a>
+        </div>
+    </div>
+</body>
+</html>
